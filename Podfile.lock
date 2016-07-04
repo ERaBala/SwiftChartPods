@@ -1,0 +1,17 @@
+PODS:
+  - Charts (2.2.5):
+    - Charts/Core (= 2.2.5)
+  - Charts/Core (2.2.5)
+  - SwiftChart (0.2.1)
+
+DEPENDENCIES:
+  - Charts
+  - SwiftChart
+
+SPEC CHECKSUMS:
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
+  SwiftChart: b76d4607022107a46473aa29a93c867872253d68
+
+PODFILE CHECKSUM: c51ab9d7ecbaf35c1cfa9dd23b570c0927a4151d
+
+COCOAPODS: 1.0.0.rc.2

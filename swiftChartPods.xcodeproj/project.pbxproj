@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4193591D251B5F009F2BEF /* SlideIntractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4193581D251B5F009F2BEF /* SlideIntractionViewController.swift */; };
 		CE8920F11D1D040A001D4F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8920F01D1D040A001D4F17 /* AppDelegate.swift */; };
 		CE8920F31D1D040A001D4F17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8920F21D1D040A001D4F17 /* ViewController.swift */; };
 		CE8920F61D1D040A001D4F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8920F41D1D040A001D4F17 /* Main.storyboard */; };
 		CE8920F81D1D040A001D4F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8920F71D1D040A001D4F17 /* Assets.xcassets */; };
 		CE8920FB1D1D040A001D4F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8920F91D1D040A001D4F17 /* LaunchScreen.storyboard */; };
+		CE8921031D1D4548001D4F17 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8921021D1D4548001D4F17 /* LineChart.swift */; };
+		CE8921051D1D45B0001D4F17 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8921041D1D45B0001D4F17 /* ChartViewController.swift */; };
+		CE8A83DC1D23CB480023D9F7 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A83DB1D23CB480023D9F7 /* LineChartViewController.swift */; };
+		CE8A83DE1D23CB7B0023D9F7 /* SwiftChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A83DD1D23CB7B0023D9F7 /* SwiftChartViewController.swift */; };
+		CE8A83E21D2403D00023D9F7 /* city.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE8A83E11D2403D00023D9F7 /* city.jpg */; };
+		CEAAB3211D25668E00ACA919 /* DATA.json in Resources */ = {isa = PBXBuildFile; fileRef = CEAAB3201D25668E00ACA919 /* DATA.json */; };
+		CEE830D21D2394C00026C734 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE830D11D2394C00026C734 /* SliderViewController.swift */; };
+		DE1B3656EAE13549B76BFA84 /* Pods_swiftChartPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093301F853F9F633B9578F37 /* Pods_swiftChartPods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		093301F853F9F633B9578F37 /* Pods_swiftChartPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftChartPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		479874AA3215155FE612150A /* Pods-swiftChartPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChartPods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChartPods/Pods-swiftChartPods.debug.xcconfig"; sourceTree = "<group>"; };
+		AAAD52630D0EEA0881149B1D /* Pods-swiftChartPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftChartPods.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftChartPods/Pods-swiftChartPods.release.xcconfig"; sourceTree = "<group>"; };
+		CE4193581D251B5F009F2BEF /* SlideIntractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideIntractionViewController.swift; sourceTree = "<group>"; };
 		CE8920ED1D1D040A001D4F17 /* swiftChartPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChartPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8920F01D1D040A001D4F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8920F21D1D040A001D4F17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,13 @@
 		CE8920F71D1D040A001D4F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8920FA1D1D040A001D4F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8920FC1D1D040A001D4F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8921021D1D4548001D4F17 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = "../../SavioIOS/swift-linechart-master/linechart/LineChart.swift"; sourceTree = "<group>"; };
+		CE8921041D1D45B0001D4F17 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		CE8A83DB1D23CB480023D9F7 /* LineChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChartViewController.swift; path = LineChart/LineChartViewController.swift; sourceTree = "<group>"; };
+		CE8A83DD1D23CB7B0023D9F7 /* SwiftChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftChartViewController.swift; path = SwiftChart/SwiftChartViewController.swift; sourceTree = "<group>"; };
+		CE8A83E11D2403D00023D9F7 /* city.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = city.jpg; path = swiftChartPods/city.jpg; sourceTree = "<group>"; };
+		CEAAB3201D25668E00ACA919 /* DATA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = DATA.json; path = swiftChartPods/DATA.json; sourceTree = "<group>"; };
+		CEE830D11D2394C00026C734 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1B3656EAE13549B76BFA84 /* Pods_swiftChartPods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2942774353F8C99ECED050E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				479874AA3215155FE612150A /* Pods-swiftChartPods.debug.xcconfig */,
+				AAAD52630D0EEA0881149B1D /* Pods-swiftChartPods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5516FFF928F6D6C0BB0B59DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				093301F853F9F633B9578F37 /* Pods_swiftChartPods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE8920E41D1D040A001D4F17 = {
 			isa = PBXGroup;
 			children = (
+				CEAAB3201D25668E00ACA919 /* DATA.json */,
+				CE8A83E11D2403D00023D9F7 /* city.jpg */,
+				CE8921021D1D4548001D4F17 /* LineChart.swift */,
+				CE8920F41D1D040A001D4F17 /* Main.storyboard */,
 				CE8920EF1D1D040A001D4F17 /* swiftChartPods */,
 				CE8920EE1D1D040A001D4F17 /* Products */,
+				2942774353F8C99ECED050E6 /* Pods */,
+				5516FFF928F6D6C0BB0B59DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +100,24 @@
 			children = (
 				CE8920F01D1D040A001D4F17 /* AppDelegate.swift */,
 				CE8920F21D1D040A001D4F17 /* ViewController.swift */,
-				CE8920F41D1D040A001D4F17 /* Main.storyboard */,
+				CE8921041D1D45B0001D4F17 /* ChartViewController.swift */,
+				CEE830D11D2394C00026C734 /* SliderViewController.swift */,
+				CEB49E841D2500C3008DF907 /* ContainerViewControllers */,
+				CE4193581D251B5F009F2BEF /* SlideIntractionViewController.swift */,
 				CE8920F71D1D040A001D4F17 /* Assets.xcassets */,
-				CE8920F91D1D040A001D4F17 /* LaunchScreen.storyboard */,
 				CE8920FC1D1D040A001D4F17 /* Info.plist */,
+				CE8920F91D1D040A001D4F17 /* LaunchScreen.storyboard */,
 			);
 			path = swiftChartPods;
+			sourceTree = "<group>";
+		};
+		CEB49E841D2500C3008DF907 /* ContainerViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A83DB1D23CB480023D9F7 /* LineChartViewController.swift */,
+				CE8A83DD1D23CB7B0023D9F7 /* SwiftChartViewController.swift */,
+			);
+			name = ContainerViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE8920FF1D1D040A001D4F17 /* Build configuration list for PBXNativeTarget "swiftChartPods" */;
 			buildPhases = (
+				3EA14CA4B8AD0C17DEF82642 /* 📦 Check Pods Manifest.lock */,
 				CE8920E91D1D040A001D4F17 /* Sources */,
 				CE8920EA1D1D040A001D4F17 /* Frameworks */,
 				CE8920EB1D1D040A001D4F17 /* Resources */,
+				4A500BDC468465441124CB10 /* 📦 Embed Pods Frameworks */,
+				648415CE016D7878E4811AB9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8A83E21D2403D00023D9F7 /* city.jpg in Resources */,
+				CEAAB3211D25668E00ACA919 /* DATA.json in Resources */,
 				CE8920FB1D1D040A001D4F17 /* LaunchScreen.storyboard in Resources */,
 				CE8920F81D1D040A001D4F17 /* Assets.xcassets in Resources */,
 				CE8920F61D1D040A001D4F17 /* Main.storyboard in Resources */,
@@ -130,13 +191,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EA14CA4B8AD0C17DEF82642 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A500BDC468465441124CB10 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftChartPods/Pods-swiftChartPods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		648415CE016D7878E4811AB9 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftChartPods/Pods-swiftChartPods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE8920E91D1D040A001D4F17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE8920F31D1D040A001D4F17 /* ViewController.swift in Sources */,
+				CE4193591D251B5F009F2BEF /* SlideIntractionViewController.swift in Sources */,
+				CE8921051D1D45B0001D4F17 /* ChartViewController.swift in Sources */,
 				CE8920F11D1D040A001D4F17 /* AppDelegate.swift in Sources */,
+				CEE830D21D2394C00026C734 /* SliderViewController.swift in Sources */,
+				CE8A83DC1D23CB480023D9F7 /* LineChartViewController.swift in Sources */,
+				CE8921031D1D4548001D4F17 /* LineChart.swift in Sources */,
+				CE8A83DE1D23CB7B0023D9F7 /* SwiftChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +264,7 @@
 				CE8920F51D1D040A001D4F17 /* Base */,
 			);
 			name = Main.storyboard;
+			path = swiftChartPods;
 			sourceTree = "<group>";
 		};
 		CE8920F91D1D040A001D4F17 /* LaunchScreen.storyboard */ = {
@@ -247,6 +363,7 @@
 		};
 		CE8921001D1D040A001D4F17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 479874AA3215155FE612150A /* Pods-swiftChartPods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = swiftChartPods/Info.plist;
@@ -258,6 +375,7 @@
 		};
 		CE8921011D1D040A001D4F17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAD52630D0EEA0881149B1D /* Pods-swiftChartPods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = swiftChartPods/Info.plist;
@@ -286,6 +404,7 @@
 				CE8921011D1D040A001D4F17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

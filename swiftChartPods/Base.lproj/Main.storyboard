@@ -1,25 +1,323 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ibd-20-KDk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="mxu-hs-Tt8">
+            <objects>
+                <navigationController id="Ibd-20-KDk" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vaq-x1-9VB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jTU-yR-UEI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NrK-1O-jgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311.5" y="509.5"/>
+        </scene>
+        <!--Sample chart-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swiftChartPods" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-bo-1ab">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Izu-gw-gxV">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Izu-gw-gxV" id="Tbr-BP-a2G">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="UBe-Qb-1Rm" kind="custom" trigger="accessoryAction" id="zL6-Wr-KdU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jdI-XL-N4S"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WKh-7k-Cz6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hc7-bo-1ab" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Dp-Of-Ocs"/>
+                            <constraint firstItem="hc7-bo-1ab" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mCS-xk-8bY"/>
+                            <constraint firstAttribute="trailing" secondItem="hc7-bo-1ab" secondAttribute="trailing" id="pPW-aR-rrh"/>
+                            <constraint firstItem="hc7-bo-1ab" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="wdA-fH-Ya3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sample chart" id="iqA-is-n2i">
+                        <barButtonItem key="backBarButtonItem" title=" " id="jvH-AC-vFb"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableview" destination="hc7-bo-1ab" id="F3K-LA-ZNG"/>
+                        <segue destination="xSb-67-BmT" kind="custom" id="xji-d7-mAx"/>
+                        <segue destination="iWZ-N4-YEI" kind="custom" id="aBv-RO-2Sk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="193.5" y="509.5"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="xZ9-D2-ydF">
+            <objects>
+                <viewController storyboardIdentifier="ChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UBe-Qb-1Rm" customClass="ChartViewController" customModule="swiftChartPods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wHF-Y6-eIl"/>
+                        <viewControllerLayoutGuide type="bottom" id="sNj-ez-s6y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n3B-Lu-GED">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R5z-Zi-fQW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZS-0V-lfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694.5" y="-217.5"/>
+        </scene>
+        <!--Slider View Controller-->
+        <scene sceneID="9SG-m9-Z9Z">
+            <objects>
+                <viewController storyboardIdentifier="SliderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xSb-67-BmT" customClass="SliderViewController" customModule="swiftChartPods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4E5-k4-t0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Qi-KS-ykE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MeY-7R-0XH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMp-AG-cpZ">
+                                <rect key="frame" x="0.0" y="174" width="700" height="353"/>
+                                <subviews>
+                                    <containerView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htg-bU-CxT">
+                                        <rect key="frame" x="0.0" y="20" width="700" height="313"/>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="htg-bU-CxT" firstAttribute="centerX" secondItem="EMp-AG-cpZ" secondAttribute="centerX" id="6BJ-E9-5tO"/>
+                                    <constraint firstAttribute="trailing" secondItem="htg-bU-CxT" secondAttribute="trailing" id="DUp-hS-zbA"/>
+                                    <constraint firstAttribute="bottom" secondItem="htg-bU-CxT" secondAttribute="bottom" constant="20" id="I58-9g-Fc2"/>
+                                    <constraint firstItem="htg-bU-CxT" firstAttribute="centerY" secondItem="EMp-AG-cpZ" secondAttribute="centerY" id="KW6-GJ-WvD"/>
+                                    <constraint firstItem="htg-bU-CxT" firstAttribute="top" secondItem="EMp-AG-cpZ" secondAttribute="top" constant="20" id="a8O-BO-fdl"/>
+                                    <constraint firstItem="htg-bU-CxT" firstAttribute="leading" secondItem="EMp-AG-cpZ" secondAttribute="leading" id="m7m-Pg-ogJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="xSb-67-BmT" id="kjy-ue-m81"/>
+                                </connections>
+                            </scrollView>
+                            <slider opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="340" translatesAutoresizingMaskIntoConstraints="NO" id="pHA-ZG-Sky">
+                                <rect key="frame" x="4" y="527" width="366" height="31"/>
+                                <connections>
+                                    <action selector="SliderAction:" destination="xSb-67-BmT" eventType="valueChanged" id="G2r-0x-BCe"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EMp-AG-cpZ" secondAttribute="trailing" constant="-325" id="3AL-uY-Dmy"/>
+                            <constraint firstAttribute="bottom" secondItem="EMp-AG-cpZ" secondAttribute="bottom" constant="140" id="6g0-q9-Joe"/>
+                            <constraint firstItem="pHA-ZG-Sky" firstAttribute="leading" secondItem="MeY-7R-0XH" secondAttribute="leadingMargin" constant="-10" id="Jd0-Pn-gCe"/>
+                            <constraint firstItem="EMp-AG-cpZ" firstAttribute="leading" secondItem="MeY-7R-0XH" secondAttribute="leading" id="ODm-FX-dLg"/>
+                            <constraint firstItem="pHA-ZG-Sky" firstAttribute="centerX" secondItem="MeY-7R-0XH" secondAttribute="centerX" id="R2p-lK-psD"/>
+                            <constraint firstItem="EMp-AG-cpZ" firstAttribute="top" secondItem="4E5-k4-t0U" secondAttribute="bottom" constant="154" id="cDf-1Z-SmF"/>
+                            <constraint firstItem="pHA-ZG-Sky" firstAttribute="top" secondItem="EMp-AG-cpZ" secondAttribute="bottom" id="ebh-0y-ukg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Slideview" destination="EMp-AG-cpZ" id="cLt-12-Q8r"/>
+                        <outlet property="containerView" destination="htg-bU-CxT" id="Hhm-AV-dBz"/>
+                        <outlet property="sliderOutlet" destination="pHA-ZG-Sky" id="Gph-3H-GU5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fs1-Fz-uLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700.5" y="509.5"/>
+        </scene>
+        <!--Slide Intraction View Controller-->
+        <scene sceneID="9XP-12-Z3J">
+            <objects>
+                <viewController storyboardIdentifier="SlideIntractionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iWZ-N4-YEI" customClass="SlideIntractionViewController" customModule="swiftChartPods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="le9-gu-lh5"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZTv-v2-3hn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LKm-Xq-od7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsu-Pg-VF4">
+                                <rect key="frame" x="10" y="172" width="662" height="233"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybZ-kz-Mfg">
+                                        <rect key="frame" x="8" y="8" width="646" height="217"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ln-56-viM">
+                                        <rect key="frame" x="12" y="106" width="638" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="638" id="zTM-ue-tVh"/>
+                                        </constraints>
+                                        <string key="text"> Swift Programming, should we need to declare datatype of the ... right there in the declaration, so Swift infers that this is to be an Int variable.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ybZ-kz-Mfg" firstAttribute="centerY" secondItem="fsu-Pg-VF4" secondAttribute="centerY" id="3dE-Pv-glR"/>
+                                    <constraint firstItem="ybZ-kz-Mfg" firstAttribute="top" secondItem="fsu-Pg-VF4" secondAttribute="topMargin" id="C4s-W7-xJT"/>
+                                    <constraint firstItem="3Ln-56-viM" firstAttribute="centerX" secondItem="fsu-Pg-VF4" secondAttribute="centerX" id="E3O-48-xtK"/>
+                                    <constraint firstItem="ybZ-kz-Mfg" firstAttribute="centerX" secondItem="fsu-Pg-VF4" secondAttribute="centerX" id="K1h-TK-0qf"/>
+                                    <constraint firstItem="ybZ-kz-Mfg" firstAttribute="leading" secondItem="fsu-Pg-VF4" secondAttribute="leadingMargin" id="TdD-49-Ubc"/>
+                                    <constraint firstItem="ybZ-kz-Mfg" firstAttribute="trailing" secondItem="fsu-Pg-VF4" secondAttribute="trailingMargin" id="aWR-wD-UU0"/>
+                                    <constraint firstItem="3Ln-56-viM" firstAttribute="top" secondItem="ybZ-kz-Mfg" secondAttribute="bottom" constant="-119" id="dxu-XM-bMT"/>
+                                    <constraint firstItem="ybZ-kz-Mfg" firstAttribute="bottom" secondItem="fsu-Pg-VF4" secondAttribute="bottomMargin" id="w5x-Wl-BYp"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="iWZ-N4-YEI" id="45B-Rs-CcZ"/>
+                                </connections>
+                            </scrollView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="X17-fD-P3N">
+                                <rect key="frame" x="18" y="413" width="339" height="31"/>
+                                <connections>
+                                    <action selector="SliderInteraction:" destination="iWZ-N4-YEI" eventType="valueChanged" id="ZCK-Ze-qoe"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fsu-Pg-VF4" firstAttribute="top" secondItem="le9-gu-lh5" secondAttribute="bottom" constant="152" id="33r-GN-NB4"/>
+                            <constraint firstItem="X17-fD-P3N" firstAttribute="leading" secondItem="LKm-Xq-od7" secondAttribute="leadingMargin" constant="4" id="cAi-Kk-fRx"/>
+                            <constraint firstAttribute="bottom" secondItem="fsu-Pg-VF4" secondAttribute="bottom" constant="262" id="e71-eW-MJQ"/>
+                            <constraint firstItem="fsu-Pg-VF4" firstAttribute="leading" secondItem="LKm-Xq-od7" secondAttribute="leadingMargin" constant="-6" id="pyh-Zh-17f"/>
+                            <constraint firstItem="X17-fD-P3N" firstAttribute="top" secondItem="fsu-Pg-VF4" secondAttribute="bottom" constant="8" symbolic="YES" id="rKQ-ig-Cc5"/>
+                            <constraint firstItem="X17-fD-P3N" firstAttribute="centerX" secondItem="LKm-Xq-od7" secondAttribute="centerX" id="tNg-me-wfv"/>
+                            <constraint firstAttribute="trailing" secondItem="fsu-Pg-VF4" secondAttribute="trailing" constant="-297" id="tlb-ee-HYi"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ViewOutlet" destination="ybZ-kz-Mfg" id="5tv-qW-kHd"/>
+                        <outlet property="scrollView" destination="fsu-Pg-VF4" id="LNR-Tx-wuK"/>
+                        <outlet property="sliderView" destination="X17-fD-P3N" id="kh3-gz-Uef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agZ-hw-yx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477.5" y="1356.5"/>
+        </scene>
+        <!--Swift Chart View Controller-->
+        <scene sceneID="XGi-hX-xz7">
+            <objects>
+                <viewController storyboardIdentifier="SwiftChartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NHN-fS-3Fm" customClass="SwiftChartViewController" customModule="swiftChartPods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VdD-zx-C0h"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hpm-5m-vPg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gei-tb-SD5">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2p-VQ-m17">
+                                <rect key="frame" x="0.0" y="0.0" width="700" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZk-xl-OuZ" customClass="Chart" customModule="SwiftChart">
+                                        <rect key="frame" x="8" y="25" width="684" height="200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdg-kv-zGU">
+                                        <rect key="frame" x="8" y="8" width="8" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="8" id="3QA-yP-DhF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WZk-xl-OuZ" firstAttribute="leading" secondItem="w2p-VQ-m17" secondAttribute="leadingMargin" id="8cB-mp-Q3L"/>
+                                    <constraint firstItem="WZk-xl-OuZ" firstAttribute="centerX" secondItem="w2p-VQ-m17" secondAttribute="centerX" id="MZ5-aK-GCL"/>
+                                    <constraint firstItem="pdg-kv-zGU" firstAttribute="leading" secondItem="w2p-VQ-m17" secondAttribute="leading" constant="8" id="SP5-YX-Ee3"/>
+                                    <constraint firstItem="pdg-kv-zGU" firstAttribute="top" secondItem="w2p-VQ-m17" secondAttribute="topMargin" id="aoS-iR-kO3"/>
+                                    <constraint firstItem="WZk-xl-OuZ" firstAttribute="trailing" secondItem="w2p-VQ-m17" secondAttribute="trailingMargin" id="gPU-CI-xic"/>
+                                    <constraint firstItem="WZk-xl-OuZ" firstAttribute="centerY" secondItem="w2p-VQ-m17" secondAttribute="centerY" id="hrq-Lx-ouJ"/>
+                                    <constraint firstItem="WZk-xl-OuZ" firstAttribute="top" secondItem="w2p-VQ-m17" secondAttribute="topMargin" constant="17" id="uHh-fg-Lzz"/>
+                                    <constraint firstItem="WZk-xl-OuZ" firstAttribute="bottom" secondItem="w2p-VQ-m17" secondAttribute="bottomMargin" constant="-17" id="zUV-VZ-795"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="NHN-fS-3Fm" id="Syh-tM-Piw"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="w2p-VQ-m17" secondAttribute="trailing" id="7zb-3l-8Mm"/>
+                            <constraint firstItem="w2p-VQ-m17" firstAttribute="top" secondItem="VdD-zx-C0h" secondAttribute="bottom" id="aJI-Ne-faR"/>
+                            <constraint firstItem="w2p-VQ-m17" firstAttribute="bottom" secondItem="Hpm-5m-vPg" secondAttribute="top" id="kEN-TH-wAr"/>
+                            <constraint firstItem="w2p-VQ-m17" firstAttribute="leading" secondItem="gei-tb-SD5" secondAttribute="leading" id="x2s-TW-WSJ"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="700" height="250"/>
+                    <connections>
+                        <outlet property="chart" destination="WZk-xl-OuZ" id="5I6-1Q-WjF"/>
+                        <outlet property="label" destination="pdg-kv-zGU" id="bsd-oG-LCC"/>
+                        <outlet property="labelLeadingMarginConstraint" destination="8cB-mp-Q3L" id="qr0-j4-EdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m6n-mR-YEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="344"/>
+        </scene>
+        <!--Line Chart View Controller-->
+        <scene sceneID="06X-Sc-gVS">
+            <objects>
+                <viewController storyboardIdentifier="LineChartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ntx-ss-lVK" customClass="LineChartViewController" customModule="swiftChartPods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lG9-UQ-AFC"/>
+                        <viewControllerLayoutGuide type="bottom" id="zm3-La-VOE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="15j-nX-CdC">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="700" height="250"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZt-rf-LuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="656"/>
         </scene>
     </scenes>
 </document>
